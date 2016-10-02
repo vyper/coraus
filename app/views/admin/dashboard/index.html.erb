@@ -1,0 +1,30 @@
+<h1>Dashboard</h1>
+
+<h2>
+  Pending talkers
+  <small>Talkers without schedule</small>
+</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @talkers_without_schedule.each do |talker | %>
+    <tr>
+      <td><%= talker.name %></td>
+      <td><%= talker.email %></td>
+      <td><%= talker.phone %></td>
+      <td>
+        <%= link_to 'Schedule', new_admin_talker_schedule_path(talker) %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

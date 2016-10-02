@@ -1,0 +1,20 @@
+<h1>New schedule to <%= @talker %></h1>
+
+<%= form_tag(admin_talker_schedule_path(@talker), method: :post) do |f| %>
+  <p>
+    <strong>Talker:</strong>
+    <%= @talker %>
+  </p>
+
+  <p>
+    <strong>Forecast to:</strong>
+    <%= @talker.forecast_at %>
+  </p>
+
+  <p>
+    <%= label_tag :schedule_id, 'Schedule' %>
+    <%= select_tag :schedule_id, options_for_select(@available_schedules.map { |s| ["#{s.scheduled_to} - #{s.name}", s.id] }) %>
+  </p>
+
+  <%= submit_tag 'Schedule!' %>
+<% end %>

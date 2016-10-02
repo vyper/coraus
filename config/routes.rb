@@ -4,8 +4,13 @@ Rails.application.routes.draw do
   resources :talkers, only: [:new, :create, :show]
 
   namespace :admin do
+    get :dashboard, to: 'dashboard#index'
+
     resources :listeners
     resources :schedules
+    resources :talkers, only: [] do
+      resource :schedule, only: [:new, :create], controller: 'talkers/schedules'
+    end
   end
 
   root to: 'talkers#new'

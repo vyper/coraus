@@ -4,4 +4,8 @@ class Schedule < ApplicationRecord
 
   validates :listener,     presence: true
   validates :scheduled_to, presence: true
+
+  scope :available, -> { includes(:listener).where(talker_id: nil) }
+
+  delegate :name, to: :listener
 end
