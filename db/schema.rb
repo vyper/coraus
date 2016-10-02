@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002184230) do
+ActiveRecord::Schema.define(version: 20161002190827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20161002184230) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.integer  "listener_id",  null: false
+    t.integer  "talker_id"
+    t.datetime "scheduled_to", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["listener_id"], name: "index_schedules_on_listener_id", using: :btree
+    t.index ["talker_id"], name: "index_schedules_on_talker_id", using: :btree
   end
 
   create_table "talkers", force: :cascade do |t|
@@ -49,4 +59,6 @@ ActiveRecord::Schema.define(version: 20161002184230) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "schedules", "listeners"
+  add_foreign_key "schedules", "talkers"
 end
