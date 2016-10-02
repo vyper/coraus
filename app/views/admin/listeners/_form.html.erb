@@ -1,4 +1,4 @@
-<%= form_for([:admin, listener]) do |f| %>
+<%= simple_form_for([:admin, listener]) do |f| %>
   <% if listener.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(listener.errors.count, "error") %> prohibited this listener from being saved:</h2>
@@ -11,20 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </div>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
 
   <div class="actions">
     <%= f.submit %>
