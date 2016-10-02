@@ -1,4 +1,4 @@
-<%= form_for(talker) do |f| %>
+<%= simple_form_for(talker) do |f| %>
   <% if talker.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(talker.errors.count, "error") %> prohibited this talker from being saved:</h2>
@@ -12,22 +12,10 @@
   <% end %>
 
   <div class="actions">
-    <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </p>
-    <p>
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </p>
-    <p>
-      <%= f.label :phone %>
-      <%= f.text_field :phone %>
-    </p>
-    <p>
-      <%= f.label :forecast_at %>
-      <%= f.text_field :forecast_at %>
-    </p>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :forecast_at %>
 
     <%= f.submit %>
   </div>
