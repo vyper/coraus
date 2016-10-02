@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002190827) do
+ActiveRecord::Schema.define(version: 20161002224703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20161002190827) do
     t.datetime "scheduled_to", null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "room_url"
     t.index ["listener_id"], name: "index_schedules_on_listener_id", using: :btree
     t.index ["talker_id"], name: "index_schedules_on_talker_id", using: :btree
   end

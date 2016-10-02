@@ -4,6 +4,7 @@ class Schedule < ApplicationRecord
 
   validates :listener,     presence: true
   validates :scheduled_to, presence: true
+  validates :room_url,     presence: true, format: URI::regexp(%w(http https))
 
   scope :available, -> { includes(:listener).where(talker_id: nil) }
   scope :near,      -> { where(arel_table[:scheduled_to].gt(Time.current)) }

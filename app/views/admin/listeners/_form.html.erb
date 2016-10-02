@@ -1,16 +1,4 @@
 <%= simple_form_for([:admin, listener], html: { class: 'form-horizontal' }) do |f| %>
-  <% if listener.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(listener.errors.count, "error") %> prohibited this listener from being saved:</h2>
-
-      <ul>
-      <% listener.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :phone %>

@@ -53,7 +53,7 @@ module Admin
     end
 
     def schedule_params
-      params.require(:schedule).permit(:listener_id, :talker_id, :scheduled_to)
+      params.require(:schedule).permit(:listener_id, :talker_id, :scheduled_to, :room_url)
     end
   end
 end
