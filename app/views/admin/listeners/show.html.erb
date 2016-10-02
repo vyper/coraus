@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @listener.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @listener.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @listener.phone %>
+</p>
+
+<%= link_to 'Edit', edit_admin_listener_path(@listener) %> |
+<%= link_to 'Back', admin_listeners_path %>

@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   resources :talkers, only: [:new, :create, :show]
 
+  namespace :admin do
+    resources :listeners
+  end
+
   root to: 'talkers#new'
 end

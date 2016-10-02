@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listeners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listeners.each do |listener| %>
+      <tr>
+        <td><%= listener.name %></td>
+        <td><%= listener.email %></td>
+        <td><%= listener.phone %></td>
+        <td><%= link_to 'Show', [:admin, listener] %></td>
+        <td><%= link_to 'Edit', edit_admin_listener_path(listener) %></td>
+        <td><%= link_to 'Destroy', [:admin, listener], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listener', new_admin_listener_path %>
