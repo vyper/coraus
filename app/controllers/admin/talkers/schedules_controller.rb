@@ -8,10 +8,11 @@ module Admin
 
       def create
         @schedule = @available_schedules.find(params[:schedule_id])
+        scheduler = ::TalkerScheduler.new(@talker, @schedule)
 
         respond_to do |format|
-          if @schedule.update(talker: @talker)
-            format.html { redirect_to admin_talker_schedule_path(@talker), notice: 'Schedule was successfully updated.' }
+          if scheduler.call
+            format.html { redirect_to admin_talker_schedule_path(scheduler.talker), notice: 'Schedule was successfully updated.' }
           else
             format.html { render :new }
           end
