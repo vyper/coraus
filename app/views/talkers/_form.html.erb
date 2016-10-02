@@ -1,4 +1,4 @@
-<%= simple_form_for(talker) do |f| %>
+<%= simple_form_for(talker, html: { class: 'form-horizontal' }) do |f| %>
   <% if talker.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(talker.errors.count, "error") %> prohibited this talker from being saved:</h2>

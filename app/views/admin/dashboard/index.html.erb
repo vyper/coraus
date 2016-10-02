@@ -5,26 +5,63 @@
   <small>Talkers without schedule</small>
 </h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% if @talkers_without_schedule.any? %>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-  <% @talkers_without_schedule.each do |talker | %>
-    <tr>
-      <td><%= talker.name %></td>
-      <td><%= talker.email %></td>
-      <td><%= talker.phone %></td>
-      <td>
-        <%= link_to 'Schedule', new_admin_talker_schedule_path(talker) %>
-      </td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+    <tbody>
+    <% @talkers_without_schedule.each do |talker | %>
+      <tr>
+        <td><%= talker.name %></td>
+        <td><%= talker.email %></td>
+        <td><%= talker.phone %></td>
+        <td>
+          <%= link_to 'Schedule', new_admin_talker_schedule_path(talker) %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No pending talkers</p>
+<% end %>
+
+<h2>
+  Waiting talkers
+  <small>Talkers waiting for the session start</small>
+</h2>
+
+<% if @talkers_waiting_for_session.any? %>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @talkers_waiting_for_session.each do |talker | %>
+      <tr>
+        <td><%= talker.name %></td>
+        <td><%= talker.email %></td>
+        <td><%= talker.phone %></td>
+        <td>
+          <%= link_to 'Room', 'javascript:void(alert("ainda não 😬"))' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No waiting talkers</p>
+<% end %>

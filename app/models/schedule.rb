@@ -6,6 +6,7 @@ class Schedule < ApplicationRecord
   validates :scheduled_to, presence: true
 
   scope :available, -> { includes(:listener).where(talker_id: nil) }
+  scope :near,      -> { where(arel_table[:scheduled_to].gt(Time.current)) }
 
   delegate :name, to: :listener
 end
