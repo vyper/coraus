@@ -1,0 +1,17 @@
+<p>
+  <strong>Listener:</strong>
+  <%= @schedule.listener %>
+</p>
+
+<p>
+  <strong>Talker:</strong>
+  <%= @schedule.talker %>
+</p>
+
+<p>
+  <strong>Scheduled to:</strong>
+  <%= @schedule.scheduled_to %> (forecast at <%= @schedule.talker.forecast_at %>)
+</p>
+
+<%= link_to 'Edit', edit_admin_schedule_path(@schedule) %> |
+<%= link_to 'Back', admin_schedules_path %>

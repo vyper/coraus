@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :listeners
     resources :schedules
     resources :talkers, only: [] do
-      resource :schedule, only: [:new, :create], controller: 'talkers/schedules'
+      resource :schedule, only: [:new, :create, :show], controller: 'talkers/schedules'
     end
   end
 

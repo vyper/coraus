@@ -11,11 +11,16 @@ module Admin
 
         respond_to do |format|
           if @schedule.update(talker: @talker)
-            format.html { redirect_to [:admin, @schedule], notice: 'Schedule was successfully updated.' }
+            format.html { redirect_to admin_talker_schedule_path(@talker), notice: 'Schedule was successfully updated.' }
           else
             format.html { render :new }
           end
         end
+      end
+
+      def show
+        @talker = Talker.find(params[:talker_id])
+        @schedule = @talker.schedule
       end
 
       private
