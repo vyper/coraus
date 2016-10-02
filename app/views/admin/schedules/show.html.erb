@@ -15,7 +15,7 @@
 
 <p>
   <strong>Room url:</strong>
-  <%= link_to_if @schedule.room_url?, @schedule.room_url, @schedule.room_url %>
+  <%= link_to @schedule.room_url, @schedule.room_url %>
 </p>
 
 <%= link_to 'Edit', edit_admin_schedule_path(@schedule) %> |

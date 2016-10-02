@@ -56,7 +56,7 @@
         <td><%= talker.email %></td>
         <td><%= talker.phone %></td>
         <td>
-          <%= link_to 'Room', 'javascript:void(alert("ainda não 😬"))' %>
+          <%= link_to 'Room', talker.schedule.room_url %>
         </td>
       </tr>
     <% end %>
