@@ -1,4 +1,4 @@
-<%= simple_form_for([:admin, schedule]) do |f| %>
+<%= simple_form_for([:admin, schedule], html: { class: 'form-horizontal' }) do |f| %>
   <% if schedule.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(schedule.errors.count, "error") %> prohibited this schedule from being saved:</h2>

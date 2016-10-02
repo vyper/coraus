@@ -1,4 +1,4 @@
-<%= simple_form_for([:admin, listener]) do |f| %>
+<%= simple_form_for([:admin, listener], html: { class: 'form-horizontal' }) do |f| %>
   <% if listener.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(listener.errors.count, "error") %> prohibited this listener from being saved:</h2>
