@@ -6,8 +6,9 @@ class Talker < ApplicationRecord
 
   has_one :schedule, required: false
 
-  scope :without_schedule,    -> { left_outer_joins(:schedule).where(schedules: { talker_id: nil }) }
-  scope :waiting_for_session, -> { joins(:schedule).merge(Schedule.near) }
+  scope :without_schedule,       -> { left_outer_joins(:schedule).where(schedules: { talker_id: nil }) }
+  scope :waiting_for_session,    -> { joins(:schedule).merge(Schedule.near) }
+  scope :waiting_for_occurrence, -> { joins(:schedule).merge(Schedule.pending_occurrence) }
 
   def to_s
     name

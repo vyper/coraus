@@ -1,8 +1,8 @@
 <h1>Dashboard</h1>
 
 <h2>
-  Pending talkers
-  <small>Talkers without schedule</small>
+  Talkers pending
+  <small>Talkers waiting for schedule confirmation</small>
 </h2>
 
 <% if @talkers_without_schedule.any? %>
@@ -30,11 +30,11 @@
     </tbody>
   </table>
 <% else %>
-  <p>No pending talkers</p>
+  <p>No talkers waiting for schedule</p>
 <% end %>
 
 <h2>
-  Waiting talkers
+  Talkers waiting
   <small>Talkers waiting for the session start</small>
 </h2>
 
@@ -63,5 +63,38 @@
     </tbody>
   </table>
 <% else %>
-  <p>No waiting talkers</p>
+  <p>No talkers waiting for session start</p>
+<% end %>
+
+<h2>
+  Occurred schedules
+  <small>Schedules needing occurrence marks</small>
+</h2>
+
+<% if @talkers_waiting_for_occurrence.any? %>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @talkers_waiting_for_occurrence.each do |talker | %>
+      <tr>
+        <td><%= talker.name %></td>
+        <td><%= talker.email %></td>
+        <td><%= talker.phone %></td>
+        <td>
+          <%= link_to 'Room', 'javascript:void(alert("wait! 😅"))' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No sessions needing occurrence mark</p>
 <% end %>
