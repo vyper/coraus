@@ -11,4 +11,8 @@ class Schedule < ApplicationRecord
   scope :pending_occurrence, -> { where(occurred_at: nil).where(arel_table[:scheduled_to].lt(Time.current)) }
 
   delegate :name, to: :listener
+
+  def occurred?
+    occurred_at.present?
+  end
 end

@@ -83,13 +83,13 @@
     </thead>
 
     <tbody>
-    <% @talkers_waiting_for_occurrence.each do |talker | %>
+    <% @talkers_waiting_for_occurrence.each do |talker| %>
       <tr>
         <td><%= talker.name %></td>
         <td><%= talker.email %></td>
         <td><%= talker.phone %></td>
         <td>
-          <%= link_to 'Occurred!', 'javascript:void(alert("wait! 😅"))' %>
+          <%= link_to 'Occurred!', new_admin_finish_path(talker.schedule) %>
         </td>
       </tr>
     <% end %>
