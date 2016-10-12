@@ -1,0 +1,23 @@
+<h1>Finish schedule to <%= @schedule.talker %></h1>
+
+<%= simple_form_for([:admin, @schedule], class: 'form-horizontal') do |f| %>
+  <p>
+    <strong>Talker:</strong>
+    <%= @schedule.talker %>
+  </p>
+
+  <p>
+    <strong>Listener:</strong>
+    <%= @schedule.listener %>
+  </p>
+
+  <p>
+    <strong>Scheduled to:</strong>
+    <%= @schedule.scheduled_to %>
+  </p>
+
+  <%= f.input :occurred_at, required: true %>
+  <%= f.input :duration,    required: true %>
+
+  <%= f.submit 'Finish!' %>
+<% end %>

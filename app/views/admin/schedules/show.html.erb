@@ -18,5 +18,17 @@
   <%= link_to @schedule.room_url, @schedule.room_url %>
 </p>
 
+<% if @schedule.occurred? %>
+  <p>
+    <strong>Occurred at:</strong>
+    <%= @schedule.occurred_at %>
+  </p>
+
+  <p>
+    <strong>Duration:</strong>
+    <%= @schedule.duration %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_admin_schedule_path(@schedule) %> |
 <%= link_to 'Back', admin_schedules_path %>
