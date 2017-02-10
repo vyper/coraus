@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      talker: Falante
+    attributes:
+      talker:
+        name: Nome
+        email: E-mail
+        phone: Telefone
+        forecast_at: Data de agendamento
