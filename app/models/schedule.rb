@@ -10,6 +10,10 @@ class Schedule < ApplicationRecord
   scope :near,               -> { where(arel_table[:scheduled_to].gt(Time.current)) }
   scope :pending_occurrence, -> { where(occurred_at: nil).where(arel_table[:scheduled_to].lt(Time.current)) }
 
+  after_initialize do
+    self.room_url = "http://appear.in/coraus-#{Digest::SHA1.hexdigest(Time.current.to_f.to_s)[0..10]}"
+  end
+
   delegate :name, to: :listener
 
   def occurred?
