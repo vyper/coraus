@@ -92,6 +92,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.1)
+    mustermann (1.0.1)
     nio4r (1.2.1)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
@@ -99,6 +100,8 @@ GEM
     pg (0.21.0)
     puma (3.10.0)
     rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.1)
@@ -134,7 +137,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    ruby_http_client (3.0.0)
+    ruby_http_client (3.3.0)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -142,11 +145,17 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sendgrid-ruby (4.0.4)
-      ruby_http_client (~> 3.0.0)
+    sendgrid-ruby (5.2.0)
+      ruby_http_client (~> 3.2)
+      sinatra (>= 1.4.7, < 3)
     simple_form (3.3.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
     spring (2.0.0)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -187,7 +196,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
-  devise
+  devise (~> 4.3)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -196,7 +205,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-i18n
   sass-rails (~> 5.0)
-  sendgrid-ruby
+  sendgrid-ruby (~> 5.2)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

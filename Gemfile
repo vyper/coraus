@@ -33,13 +33,13 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Authentication
-gem 'devise'
+gem 'devise', '~> 4.3'
 
 # Form builder
 gem 'simple_form'
 
 # Mailer
-gem 'sendgrid-ruby'
+gem 'sendgrid-ruby', '~> 5.2'
 
 # Translation
 gem 'rails-i18n'
