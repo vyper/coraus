@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 
 # Form builder
-gem 'simple_form'
+gem 'simple_form', '~> 3.5'
 
 # Mailer
 gem 'sendgrid-ruby', '~> 5.2'
