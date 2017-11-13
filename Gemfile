@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.1.4'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -33,13 +33,13 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Authentication
-gem 'devise'
+gem 'devise', '~> 4.3'
 
 # Form builder
-gem 'simple_form'
+gem 'simple_form', '~> 3.5'
 
 # Mailer
-gem 'sendgrid-ruby'
+gem 'sendgrid-ruby', '~> 5.2'
 
 # Translation
 gem 'rails-i18n'
@@ -52,7 +52,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen', '~> 3.1'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

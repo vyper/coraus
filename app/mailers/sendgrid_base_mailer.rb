@@ -25,10 +25,10 @@ class SendgridBaseMailer
   def personalization
     personalization = SendGrid::Personalization.new
 
-    personalization.to = to
+    personalization.add_to(to)
 
     @params.each do |key, value|
-      personalization.substitutions = SendGrid::Substitution.new(key: key, value: value)
+      personalization.add_substitution(SendGrid::Substitution.new(key: key, value: value))
     end
 
     personalization
@@ -37,7 +37,7 @@ class SendgridBaseMailer
   def data
     mail = SendGrid::Mail.new
     mail.from = from
-    mail.personalizations = personalization
+    mail.add_personalization(personalization)
     mail.template_id = @template_id
     mail
   end
