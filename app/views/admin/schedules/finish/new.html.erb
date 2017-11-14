@@ -16,7 +16,7 @@
     <%= @schedule.scheduled_to %>
   </p>
 
-  <%= f.input :occurred_at, required: true %>
+  <%= f.input :occurred_at, required: true, as: :string, input_html: { class: 'form_datetime' } %>
   <%= f.input :duration,    required: true %>
 
   <%= f.submit 'Finish!' %>

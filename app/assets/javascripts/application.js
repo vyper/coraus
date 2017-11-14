@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  $('.form_datetime').datetimepicker({
+    autoclose: true,
+    format: 'dd/mm/yyyy hh:ii',
+  });
+});
