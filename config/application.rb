@@ -14,5 +14,9 @@ module Coraus
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+
+    # TODO Change to config/initializers. +_+
+    config.time_zone = 'Brasilia'
   end
 end

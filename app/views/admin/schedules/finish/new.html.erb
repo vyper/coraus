@@ -13,10 +13,10 @@
 
   <p>
     <strong>Scheduled to:</strong>
-    <%= @schedule.scheduled_to %>
+    <%=l @schedule.scheduled_to, format: :short %>
   </p>
 
-  <%= f.input :occurred_at, required: true %>
+  <%= f.input :occurred_at, required: true, as: :date_time_picker %>
   <%= f.input :duration,    required: true %>
 
   <%= f.submit 'Finish!' %>
