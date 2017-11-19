@@ -12,6 +12,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Forecast</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -22,6 +23,7 @@
         <td><%= talker.name %></td>
         <td><%= talker.email %></td>
         <td><%= talker.phone %></td>
+        <td><%=l talker.forecast_at, format: :short %></td>
         <td>
           <%= link_to 'Schedule', new_admin_talker_schedule_path(talker) %>
         </td>
@@ -45,6 +47,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Scheduled to</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -55,6 +58,7 @@
         <td><%= talker.name %></td>
         <td><%= talker.email %></td>
         <td><%= talker.phone %></td>
+        <td><%=l talker.schedule.scheduled_to, format: :short %></td>
         <td>
           <%= link_to 'Room', talker.schedule.room_url %>
         </td>
@@ -78,6 +82,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Scheduled to</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -88,6 +93,7 @@
         <td><%= talker.name %></td>
         <td><%= talker.email %></td>
         <td><%= talker.phone %></td>
+        <td><%=l talker.schedule.scheduled_to, format: :short %></td>
         <td>
           <%= link_to 'Occurred!', new_admin_finish_path(talker.schedule) %>
         </td>

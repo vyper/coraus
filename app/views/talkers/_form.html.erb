@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :phone %>
-  <%= f.input :forecast_at, as: :string, input_html: { class: 'form_datetime' } %>
+  <%= f.input :forecast_at, as: :date_time_picker %>
 
   <div class="actions">
     <%= f.submit 'Solicitar agendamento' %>

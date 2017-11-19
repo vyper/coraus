@@ -10,7 +10,7 @@
 
 <p>
   <strong>Scheduled to:</strong>
-  <%= @schedule.scheduled_to %>
+  <%=l @schedule.scheduled_to, format: :short %>
 </p>
 
 <p>
@@ -21,7 +21,7 @@
 <% if @schedule.occurred? %>
   <p>
     <strong>Occurred at:</strong>
-    <%= @schedule.occurred_at %>
+    <%=l @schedule.occurred_at, format: :short %>
   </p>
 
   <p>

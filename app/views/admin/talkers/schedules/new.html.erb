@@ -8,7 +8,7 @@
 
   <p>
     <strong>Forecast to:</strong>
-    <%= @talker.forecast_at %>
+    <%=l @talker.forecast_at, format: :short %>
   </p>
 
   <div class="form-group select optional schedule_talker">

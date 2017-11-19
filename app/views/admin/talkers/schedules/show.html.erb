@@ -10,7 +10,7 @@
 
 <p>
   <strong>Scheduled to:</strong>
-  <%= @schedule.scheduled_to %> (forecast at <%= @schedule.talker.forecast_at %>)
+  <%=l @schedule.scheduled_to, format: :short %> (forecast at <%=l @schedule.talker.forecast_at, format: :short %>)
 </p>
 
 <%= link_to 'Edit', edit_admin_schedule_path(@schedule) %> |

@@ -1,6 +1,6 @@
 <%= simple_form_for([:admin, schedule], html: { class: 'form-horizontal' }) do |f| %>
   <%= f.association :listener %>
-  <%= f.input :scheduled_to, as: :string, input_html: { class: 'form_datetime' } %>
+  <%= f.input :scheduled_to, as: :date_time_picker %>
   <%= f.input :room_url, hint: "Use #{link_to 'appear.in', 'http://appear.in', target: '_blank'} to generate a room url".html_safe %>
   <%= f.association :talker %>
 
