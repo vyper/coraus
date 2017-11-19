@@ -8,3 +8,14 @@ pt-BR:
         email: E-mail
         phone: Telefone
         forecast_at: Data de agendamento
+      schedule:
+        listener: Ouvinte
+        talker: Falante
+        room_url: Endereço da sala
+        scheduled_to: Agendado para
+        occurred_at: Ocorrido em
+        duration: Duração
+      listener:
+        name: Nome
+        email: E-mail
+        phone: Telefone

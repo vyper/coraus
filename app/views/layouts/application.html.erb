@@ -33,13 +33,12 @@
         <div id="navbar" class="collapse navbar-collapse">
         <% if user_signed_in? %>
           <ul class="nav navbar-nav">
-            <!-- <li class="active"><a href="#">Home</a></li> -->
             <li><%= link_to 'Dashboard', admin_dashboard_path %></li>
-            <li><%= link_to 'Schedules', admin_schedules_path %></li>
-            <li><%= link_to 'Listeners', admin_listeners_path %></li>
+            <li><%= link_to 'Agendamentos', admin_schedules_path %></li>
+            <li><%= link_to 'Ouvintes', admin_listeners_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
           </ul>
         <% end %>
         </div><!--/.nav-collapse -->

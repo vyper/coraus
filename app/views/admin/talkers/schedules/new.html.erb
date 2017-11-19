@@ -1,19 +1,19 @@
-<h1>New schedule to <%= @talker %></h1>
+<h1>Novo agendamento para <%= @talker %></h1>
 
 <%= form_tag(admin_talker_schedule_path(@talker), method: :post, class: 'form-horizontal') do |f| %>
   <p>
-    <strong>Talker:</strong>
+    <strong>Falante:</strong>
     <%= @talker %>
   </p>
 
   <p>
-    <strong>Forecast to:</strong>
+    <strong>Data de interesse:</strong>
     <%=l @talker.forecast_at, format: :short %>
   </p>
 
   <div class="form-group select optional schedule_talker">
     <%= label_tag :schedule_id, class: 'control-label select required' do %>
-      <abbr title="required">*</abbr> Listener
+      <abbr title="required">*</abbr> Ouvinte
     <% end %>
     <%= select_tag :schedule_id, options_for_select(@available_schedules.map { |s| ["#{s.scheduled_to} - #{s.name}", s.id] }), class: "form-control select optional" %>
   </div>
