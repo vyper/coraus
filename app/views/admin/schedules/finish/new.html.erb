@@ -1,23 +1,23 @@
-<h1>Finish schedule to <%= @schedule.talker %></h1>
+<h1>Finalizar a sessão do <%= @schedule.talker %></h1>
 
 <%= simple_form_for([:admin, @schedule], class: 'form-horizontal') do |f| %>
   <p>
-    <strong>Talker:</strong>
+    <strong>Falante:</strong>
     <%= @schedule.talker %>
   </p>
 
   <p>
-    <strong>Listener:</strong>
+    <strong>Ouvinte:</strong>
     <%= @schedule.listener %>
   </p>
 
   <p>
-    <strong>Scheduled to:</strong>
+    <strong>Agendado para:</strong>
     <%=l @schedule.scheduled_to, format: :short %>
   </p>
 
   <%= f.input :occurred_at, required: true, as: :date_time_picker %>
   <%= f.input :duration,    required: true %>
 
-  <%= f.submit 'Finish!' %>
+  <%= f.submit 'Finalizar!' %>
 <% end %>

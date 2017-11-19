@@ -1,34 +1,34 @@
 <p>
-  <strong>Listener:</strong>
+  <strong>Ouvinte:</strong>
   <%= @schedule.listener %>
 </p>
 
 <p>
-  <strong>Talker:</strong>
+  <strong>Falante:</strong>
   <%= @schedule.talker %>
 </p>
 
 <p>
-  <strong>Scheduled to:</strong>
+  <strong>Agendado para:</strong>
   <%=l @schedule.scheduled_to, format: :short %>
 </p>
 
 <p>
-  <strong>Room url:</strong>
+  <strong>Endereço da sala:</strong>
   <%= link_to @schedule.room_url, @schedule.room_url %>
 </p>
 
 <% if @schedule.occurred? %>
   <p>
-    <strong>Occurred at:</strong>
+    <strong>Ocorreu em:</strong>
     <%=l @schedule.occurred_at, format: :short %>
   </p>
 
   <p>
-    <strong>Duration:</strong>
+    <strong>Duração:</strong>
     <%= @schedule.duration %>
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_admin_schedule_path(@schedule) %> |
-<%= link_to 'Back', admin_schedules_path %>
+<%= link_to 'Editar', edit_admin_schedule_path(@schedule) %> |
+<%= link_to 'Voltar', admin_schedules_path %>

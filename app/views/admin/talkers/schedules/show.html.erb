@@ -1,17 +1,17 @@
 <p>
-  <strong>Listener:</strong>
+  <strong>Ouvinte:</strong>
   <%= @schedule.listener %>
 </p>
 
 <p>
-  <strong>Talker:</strong>
+  <strong>Falante:</strong>
   <%= @schedule.talker %>
 </p>
 
 <p>
-  <strong>Scheduled to:</strong>
-  <%=l @schedule.scheduled_to, format: :short %> (forecast at <%=l @schedule.talker.forecast_at, format: :short %>)
+  <strong>Agendado para:</strong>
+  <%=l @schedule.scheduled_to, format: :short %> (data de interesse: <%=l @schedule.talker.forecast_at, format: :short %>)
 </p>
 
-<%= link_to 'Edit', edit_admin_schedule_path(@schedule) %> |
-<%= link_to 'Back', admin_schedules_path %>
+<%= link_to 'Editar', edit_admin_schedule_path(@schedule) %> |
+<%= link_to 'Voltar', admin_schedules_path %>

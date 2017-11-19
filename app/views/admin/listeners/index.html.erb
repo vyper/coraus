@@ -1,11 +1,11 @@
-<h1>Listeners</h1>
+<h1>Ouvintes</h1>
 
 <table class='table'>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Telefone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
         <td><%= listener.name %></td>
         <td><%= listener.email %></td>
         <td><%= listener.phone %></td>
-        <td><%= link_to 'Show', [:admin, listener] %></td>
-        <td><%= link_to 'Edit', edit_admin_listener_path(listener) %></td>
-        <td><%= link_to 'Destroy', [:admin, listener], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', [:admin, listener] %></td>
+        <td><%= link_to 'Editar', edit_admin_listener_path(listener) %></td>
+        <td><%= link_to 'Remover', [:admin, listener], method: :delete, data: { confirm: 'Você tem certeza que deseja remover?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Listener', new_admin_listener_path %>
+<%= link_to 'Novo ouvinte', new_admin_listener_path %>

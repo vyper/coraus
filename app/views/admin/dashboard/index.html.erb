@@ -1,18 +1,18 @@
 <h1>Dashboard</h1>
 
 <h2>
-  Talkers pending
-  <small>Talkers waiting for schedule confirmation</small>
+  Falantes pendentes
+  <small>Falantes aguardando para a confirmação do agendamento</small>
 </h2>
 
 <% if @talkers_without_schedule.any? %>
   <table class='table'>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Forecast</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Data de interesse</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -25,29 +25,29 @@
         <td><%= talker.phone %></td>
         <td><%=l talker.forecast_at, format: :short %></td>
         <td>
-          <%= link_to 'Schedule', new_admin_talker_schedule_path(talker) %>
+          <%= link_to 'Agendar', new_admin_talker_schedule_path(talker) %>
         </td>
       </tr>
     <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>No talkers waiting for schedule</p>
+  <p>Sem falantes aguardando por agendamento</p>
 <% end %>
 
 <h2>
-  Talkers waiting
-  <small>Talkers waiting for the session start</small>
+  Falantes aguardando
+  <small>Falantes aguardando pelo início da sessão</small>
 </h2>
 
 <% if @talkers_waiting_for_session.any? %>
   <table class='table'>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Scheduled to</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Agendado para</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -60,29 +60,29 @@
         <td><%= talker.phone %></td>
         <td><%=l talker.schedule.scheduled_to, format: :short %></td>
         <td>
-          <%= link_to 'Room', talker.schedule.room_url %>
+          <%= link_to 'Sala', talker.schedule.room_url %>
         </td>
       </tr>
     <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>No talkers waiting for session start</p>
+  <p>Sem falantes aguardando pelo início da sessão</p>
 <% end %>
 
 <h2>
-  Occurred schedules
-  <small>Schedules needing occurrence marks</small>
+  Sessões ocorridas
+  <small>Sessões ocorridas e que necessitam de finalização</small>
 </h2>
 
 <% if @talkers_waiting_for_occurrence.any? %>
   <table class='table'>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Scheduled to</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Agendado para</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -95,12 +95,12 @@
         <td><%= talker.phone %></td>
         <td><%=l talker.schedule.scheduled_to, format: :short %></td>
         <td>
-          <%= link_to 'Occurred!', new_admin_finish_path(talker.schedule) %>
+          <%= link_to 'Finalizar!', new_admin_finish_path(talker.schedule) %>
         </td>
       </tr>
     <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>No sessions needing occurrence mark</p>
+  <p>Sem sessões necessitando de finalização</p>
 <% end %>
