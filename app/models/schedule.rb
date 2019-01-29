@@ -11,7 +11,7 @@ class Schedule < ApplicationRecord
   scope :pending_occurrence, -> { where(occurred_at: nil).where(arel_table[:scheduled_to].lt(Time.current)) }
 
   after_initialize do
-    self.room_url = "http://appear.in/coraus-#{Digest::SHA1.hexdigest(Time.current.to_f.to_s)[0..10]}"
+    self.room_url = "https://meet.jit.si/coraus-#{Digest::SHA1.hexdigest(Time.current.to_f.to_s)[0..10]}"
   end
 
   delegate :name, to: :listener
