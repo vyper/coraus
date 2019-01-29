@@ -3,6 +3,10 @@
   <%= f.input :email %>
   <%= f.input :phone %>
   <%= f.input :forecast_at, as: :date_time_picker %>
+  <%= f.input :preferred_listener_gender,
+                as: :radio_buttons,
+                collection: Talker.preferred_listener_genders,
+                :label_method => lambda { |item| t("simple_form.options.talker.preferred_listener_gender.#{item[0]}") } %>
 
   <div class="actions">
     <%= f.submit 'Solicitar agendamento' %>

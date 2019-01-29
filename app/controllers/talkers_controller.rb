@@ -26,6 +26,6 @@ class TalkersController < ApplicationController
     end
 
     def talker_params
-      params.require(:talker).permit(:name, :email, :phone, :forecast_at)
+      params.require(:talker).permit(:name, :email, :phone, :forecast_at, :preferred_listener_gender)
     end
 end

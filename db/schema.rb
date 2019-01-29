@@ -10,56 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012174553) do
+ActiveRecord::Schema.define(version: 20190129003820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "listeners", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "email"
+  create_table "listeners", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "schedules", force: :cascade do |t|
-    t.integer  "listener_id",  null: false
-    t.integer  "talker_id"
+  create_table "schedules", id: :serial, force: :cascade do |t|
+    t.integer "listener_id", null: false
+    t.integer "talker_id"
     t.datetime "scheduled_to", null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "room_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "room_url"
     t.datetime "occurred_at"
-    t.integer  "duration"
-    t.index ["listener_id"], name: "index_schedules_on_listener_id", using: :btree
-    t.index ["talker_id"], name: "index_schedules_on_talker_id", using: :btree
+    t.integer "duration"
+    t.index ["listener_id"], name: "index_schedules_on_listener_id"
+    t.index ["talker_id"], name: "index_schedules_on_talker_id"
   end
 
-  create_table "talkers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.datetime "forecast_at"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
+# Could not dump table "talkers" because of following StandardError
+#   Unknown type 'talker_preferred_listener_gender' for column 'preferred_listener_gender'
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "schedules", "listeners"
