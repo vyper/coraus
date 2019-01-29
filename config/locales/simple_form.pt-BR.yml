@@ -1,0 +1,8 @@
+pt-BR:
+  simple_form:
+    options:
+      talker:
+        preferred_listener_gender:
+          male: Masculino
+          female: Feminino
+          indifferent: Indiferente

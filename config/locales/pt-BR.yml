@@ -2,12 +2,15 @@ pt-BR:
   activerecord:
     models:
       talker: Falante
+      listener: Ouvinte
+      schedule: Agendamento
     attributes:
       talker:
         name: Nome
         email: E-mail
         phone: Telefone
         forecast_at: Data de agendamento
+        preferred_listener_gender: Gênero preferido do ouvinte
       schedule:
         listener: Ouvinte
         talker: Falante
