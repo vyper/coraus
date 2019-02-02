@@ -6,3 +6,7 @@ pt-BR:
           male: Masculino
           female: Feminino
           indifferent: Indiferente
+      listener:
+        gender:
+          male: Masculino
+          female: Feminino
