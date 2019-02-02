@@ -53,7 +53,7 @@ module Admin
     end
 
     def listener_params
-      params.require(:listener).permit(:name, :email, :phone)
+      params.require(:listener).permit(:name, :email, :phone, :gender)
     end
   end
 end

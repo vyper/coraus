@@ -13,5 +13,10 @@
   <%= @listener.phone %>
 </p>
 
+<p>
+  <strong>Gênero:</strong>
+  <%=t @listener.gender, scope: 'simple_form.options.listener.gender' %>
+</p>
+
 <%= link_to 'Editar', edit_admin_listener_path(@listener) %> |
 <%= link_to 'Voltar', admin_listeners_path %>

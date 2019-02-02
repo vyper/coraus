@@ -2,6 +2,9 @@
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :phone %>
+  <%= f.input :gender,
+              collection: Listener.genders,
+              :label_method => lambda { |item| t("simple_form.options.listener.gender.#{item[0]}") } %>
 
   <div class="actions">
     <%= f.submit %>
