@@ -2,11 +2,18 @@
   <%= f.input :name %>
   <%= f.input :email %>
   <%= f.input :phone %>
-  <%= f.input :forecast_at, as: :date_time_picker %>
   <%= f.input :preferred_listener_gender,
                 as: :radio_buttons,
                 collection: Talker.preferred_listener_genders,
+                selected: 'indifferent',
                 :label_method => lambda { |item| t("simple_form.options.talker.preferred_listener_gender.#{item[0]}") } %>
+  <div class="form-group select optional schedule_talker">
+    <%= label_tag :schedule_id, class: 'control-label select required' do %>
+      <abbr title="required">*</abbr> Horário
+    <% end %>
+
+    <%= select_tag :schedule_id, [], class: "form-control select optional" %>
+  </div>
 
   <div class="actions">
     <%= f.submit 'Solicitar agendamento' %>
