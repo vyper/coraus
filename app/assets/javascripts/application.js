@@ -20,4 +20,13 @@ $(document).on('turbolinks:load', function() {
     autoclose: true,
     format: 'dd/mm/yyyy hh:ii'
   });
+
+  $('.talker_preferred_listener_gender input[type=radio]').on('change', function() {
+    var gender = $(this).val();
+    $.ajax({
+      url: '/schedules?gender=' + gender,
+      type: 'GET',
+      dataType: 'script'
+    });
+  });
 });

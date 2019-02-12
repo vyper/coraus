@@ -6,10 +6,14 @@ class TalkersController < ApplicationController
   end
 
   def create
-    @talker = Talker.new(talker_params)
+    @talker   = Talker.new(talker_params)
 
     respond_to do |format|
       if @talker.save
+        @schedule = Schedule.available.find(params[:schedule_id])
+        scheduler = ::TalkerScheduler.new(@talker, @schedule)
+        scheduler.call
+
         format.html { redirect_to @talker, notice: 'Talker was successfully created.' }
       else
         format.html { render :new }

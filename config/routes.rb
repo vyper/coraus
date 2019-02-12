@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :talkers, only: [:new, :create, :show]
+  resources :talkers,   only: [:new, :create, :show]
+  resources :schedules, only: [:index]
 
   namespace :admin do
     get :dashboard, to: 'dashboard#index'
