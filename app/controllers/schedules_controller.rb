@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
   def index
-    @schedules = Schedule.available(params[:gender])
+    @schedules = Schedule.where(scheduled_to: Date.tomorrow..7.days.from_now).available(params[:gender])
 
     respond_to do |format|
       format.json { render json: @schedules }
