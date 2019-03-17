@@ -21,7 +21,7 @@ class TalkerScheduler
     mail = SendgridBaseMailer.new(
       template_id: '77bb51d5-6871-4622-825d-d32e0074a301',
       to: { name: talker.name, email: talker.email },
-      from: { name: 'Coraus', email: 'contato@coraus.com.br' },
+      from: { name: 'Athento', email: 'contato@athento.com.br' },
       params: { '-name-' => talker.name, '-listener-' => schedule.listener.name, '-scheduled_to-' => schedule.scheduled_to, '-room_url-' => schedule.room_url }
     )
 
@@ -32,7 +32,7 @@ class TalkerScheduler
     mail = SendgridBaseMailer.new(
       template_id: '2babd711-4791-404d-a49f-9fffec5b88c8',
       to: { name: schedule.listener.name, email: schedule.listener.email },
-      from: { name: 'Coraus', email: 'contato@coraus.com.br' },
+      from: { name: 'Athento', email: 'contato@athento.com.br' },
       params: { '-name-' => schedule.listener.name, '-talker-' => talker.name, '-scheduled_to-' => schedule.scheduled_to, '-room_url-' => schedule.room_url }
     )
 

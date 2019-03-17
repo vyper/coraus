@@ -17,7 +17,7 @@ class Schedule < ApplicationRecord
   end
 
   after_initialize do
-    self.room_url = "https://meet.jit.si/coraus-#{Digest::SHA1.hexdigest(Time.current.to_f.to_s)[0..10]}"
+    self.room_url = "https://meet.jit.si/athento-#{Digest::SHA1.hexdigest(Time.current.to_f.to_s)[0..10]}"
   end
 
   delegate :name, to: :listener
