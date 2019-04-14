@@ -1,6 +1,6 @@
 <h1>Finalizar a sessão do <%= @schedule.talker %></h1>
 
-<%= simple_form_for([:admin, @schedule], class: 'form-horizontal') do |f| %>
+<%= simple_form_for(@schedule, url: admin_finish_path(@schedule), method: :post, class: 'form-horizontal') do |f| %>
   <p>
     <strong>Falante:</strong>
     <%= @schedule.talker %>
