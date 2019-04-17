@@ -3,7 +3,7 @@ module Admin
     before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
     def index
-      @schedules = Schedule.all
+      @schedules = Schedule.order(scheduled_to: :asc).all
     end
 
     def show
