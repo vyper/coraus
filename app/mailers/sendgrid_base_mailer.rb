@@ -1,8 +1,11 @@
 require 'sendgrid-ruby'
 
 class SendgridBaseMailer
-  def initialize(template_id:, from:, to:, params: {})
+  attr_reader :subject
+
+  def initialize(template_id:, from:, subject: nil, to:, params: {})
     @template_id = template_id
+    @subject     = subject
     @from        = from
     @to          = to
     @params      = params
@@ -38,6 +41,7 @@ class SendgridBaseMailer
     mail = SendGrid::Mail.new
     mail.from = from
     mail.add_personalization(personalization)
+    mail.subject = subject if subject.present?
     mail.template_id = @template_id
     mail
   end
