@@ -15,6 +15,14 @@ class Schedule < ApplicationRecord
       .where(talker_id: nil)
       .where(listeners: { gender: gender })
   end
+  scope :remindable, -> do
+    two_hours_reminder_base = Time.current + 2.hours
+    two_hours_reminder_interval = two_hours_reminder_base.beginning_of_hour..two_hours_reminder_base.end_of_hour
+    one_day_reminder_base = Time.current + 1.day
+    one_day_reminder_interval = one_day_reminder_base.beginning_of_hour..one_day_reminder_base.end_of_hour
+
+    where(occurred_at: nil).where(scheduled_to: two_hours_reminder_interval).or(where(scheduled_to: one_day_reminder_interval))
+  end
 
   after_initialize do
     self.room_url = "https://meet.jit.si/athento-#{Digest::SHA1.hexdigest(Time.current.to_f.to_s)[0..10]}"
