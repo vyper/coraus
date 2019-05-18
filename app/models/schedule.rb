@@ -21,7 +21,10 @@ class Schedule < ApplicationRecord
     one_day_reminder_base = Time.current + 1.day
     one_day_reminder_interval = one_day_reminder_base.beginning_of_hour..one_day_reminder_base.end_of_hour
 
-    where(occurred_at: nil).where(scheduled_to: two_hours_reminder_interval).or(where(scheduled_to: one_day_reminder_interval))
+    where(occurred_at: nil).
+      where.not(listener_id: nil).
+      where.not(talker_id: nil).
+      where(scheduled_to: two_hours_reminder_interval).or(where(scheduled_to: one_day_reminder_interval))
   end
 
   after_initialize do
