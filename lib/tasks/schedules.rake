@@ -9,11 +9,11 @@ namespace :schedules do
         puts " - #{schedule.scheduled_to}"
 
         print "   + Delivering to talker (#{schedule.talker.email})... "
-        SuccessfullyScheduledToTalkerMailer.new(schedule).deliver
+        SuccessfullyScheduledToTalkerMailer.new(schedule, reminder: true).deliver
         puts "done!"
 
         print "   + Delivering to listener (#{schedule.listener.email})... "
-        SuccessfullyScheduledToListenerMailer.new(schedule).deliver
+        SuccessfullyScheduledToListenerMailer.new(schedule, reminder: true).deliver
         puts "done!"
       end
       puts
