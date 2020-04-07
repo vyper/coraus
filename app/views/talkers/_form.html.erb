@@ -1,7 +1,6 @@
 <%= simple_form_for(talker) do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: 'Como quer ser chamado(a)?' %>
   <%= f.input :email %>
-  <%= f.input :phone %>
   <%= f.input :preferred_listener_gender,
                 as: :radio_buttons,
                 collection: Talker.preferred_listener_genders,
