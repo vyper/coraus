@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 
 # Form builder
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 5.0'
 
 # Pagination
 gem 'kaminari', '~> 1.2.0'
