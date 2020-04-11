@@ -38,6 +38,10 @@ gem 'devise', '~> 4.3'
 # Form builder
 gem 'simple_form', '~> 3.5'
 
+# Pagination
+gem 'kaminari', '~> 1.2.0'
+gem 'bootstrap-kaminari-views', '~> 0.0.5'
+
 # Mailer
 gem 'sendgrid-ruby', '~> 5.2'
 

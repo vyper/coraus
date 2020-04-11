@@ -1,5 +1,19 @@
 <h1>Agendamentos</h1>
 
+<%= form_tag admin_schedules_path, method: :get do %>
+  <label>Filtrar por ouvinte:</label>
+
+  <%=
+    select_tag(
+      :listener_id,
+      options_from_collection_for_select(@listeners, :id, :name, selected: params[:listener_id]),
+      include_blank: true
+    )
+  %>
+
+  <%= submit_tag "Filtrar" %>
+<% end %>
+
 <table class='table'>
   <thead>
     <tr>
@@ -24,6 +38,8 @@
   </tbody>
 </table>
 
-<br>
+<p>
+  <%= paginate @schedules, theme: 'twitter-bootstrap-3' %>
+</p>
 
 <%= link_to 'Novo agendamento', new_admin_schedule_path %>

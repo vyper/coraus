@@ -3,7 +3,9 @@ module Admin
     before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
     def index
-      @schedules = Schedule.order(scheduled_to: :asc).all
+      @listeners = Listener.order(name: :asc).all
+      @schedules = Schedule.includes(:listener).order(scheduled_to: :asc).page(params[:page]).all
+      @schedules = @schedules.where(listener_id: params[:listener_id]) if params[:listener_id].present?
     end
 
     def show
