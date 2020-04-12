@@ -1,112 +1,74 @@
 rows = [
-  ['male', 'leandro', '41996486846', 'lecitelli@gmail.com', '30/03/2020', '09:00:00'],
-  ['male', 'leandro', '41996486846', 'lecitelli@gmail.com', '30/03/2020', '10:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '30/03/2020', '19:30:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '30/03/2020', '20:30:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '31/03/2020', '10:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '31/03/2020', '11:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '31/03/2020', '17:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '31/03/2020', '18:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '01/04/2020', '09:30:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '01/04/2020', '10:30:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '01/04/2020', '19:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '01/04/2020', '20:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '02/04/2020', '10:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '02/04/2020', '11:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '02/04/2020', '14:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '02/04/2020', '15:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '03/04/2020', '09:00:00'],
-  ['male', 'Leandro', '41996486846', 'lecitelli@gmail.com', '03/04/2020', '10:00:00'],
-  ['female', 'Olívia', '41999896191', 'olivia.braschi@gmail.com', '01/04/2020', '18:30:00'],
-  ['female', 'Olívia', '41999896191', 'olivia.braschi@gmail.com', '02/04/2020', '14:00:00'],
-  ['female', 'Olívia', '41999896191', 'olivia.braschi@gmail.com', '03/04/2020', '10:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '30/03/2020', '14:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '30/03/2020', '15:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '31/03/2020', '14:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '31/03/2020', '15:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '01/04/2020', '14:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '01/04/2020', '15:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '02/04/2020', '14:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '02/04/2020', '15:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '03/04/2020', '14:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '03/04/2020', '15:00:00'],
-  ['female', 'Marina Moreira', '41999244151', 'marina1568@gmail.com', '03/04/2020', '15:00:00'],
-  ['female', 'Marina Moreira', '41999244151', 'marina1568@gmail.com', '03/04/2020', '16:00:00'],
-  ['female', 'Marina Moreira', '41999244151', 'marina1568@gmail.com', '03/04/2020', '17:00:00'],
-  ['female', 'Marina Moreira', '41999244151', 'marina1568@gmail.com', '04/04/2020', '10:00:00'],
-  ['female', 'Marina Moreira', '41999244151', 'marina1568@gmail.com', '04/04/2020', '11:00:00'],
-  ['female', 'Marina Moreira', '41999244151', 'marina1568@gmail.com', '04/04/2020', '14:00:00'],
-  ['female', 'Ana Lucia Munzner', '41991036832', 'ana@munzner.co', '02/04/2020', '16:00:00'],
-  ['female', 'Ana Lucia Munzner', '41991036832', 'ana@munzner.co', '02/04/2020', '17:00:00'],
-  ['female', 'Ana Lucia Munzner', '41991036832', 'ana@munzner.co', '02/04/2020', '16:00:00'],
-  ['female', 'Ana Lucia Munzner', '41991036832', 'ana@munzner.co', '02/04/2020', '17:00:00'],
-  ['female', 'Thayná Garcez', '41995451425', 'thayna.garcez@hotmail.com', '31/03/2020', '21:00:00'],
-  ['female', 'Thayná Garcez', '41995451425', 'thayna.garcez@hotmail.com', '02/04/2020', '21:00:00'],
-  ['male', 'Luis Otavio', '41992890638', 'paludo.luisotavio@gmail.com', '30/03/2020', '17:00:00'],
-  ['male', 'Luis Otavio', '41992890638', 'paludo.luisotavio@gmail.com', '31/03/2020', '17:00:00'],
-  ['male', 'Luis Otavio', '41992890638', 'paludo.luisotavio@gmail.com', '01/04/2020', '17:00:00'],
-  ['male', 'Luis Otavio', '41992890638', 'paludo.luisotavio@gmail.com', '02/04/2020', '17:00:00'],
-  ['male', 'Luis Otavio', '41992890638', 'paludo.luisotavio@gmail.com', '03/04/2020', '17:00:00'],
-  ['female', 'Rita Amaral', '41991639786', 'ritamaral@gmail.com', '01/04/2020', '17:00:00'],
-  ['female', 'Rita Amaral', '41991639786', 'ritamaral@gmail.com', '03/04/2020', '17:00:00'],
-  ['female', 'Bia', '31999400677', 'dialogarconexoes@gmail.com', '31/03/2020', '15:00:00'],
-  ['female', 'Bia', '31999400677', 'dialogarconexoes@gmail.com', '01/04/2020', '15:00:00'],
-  ['female', 'Bia', '31999400677', 'dialogarconexoes@gmail.com', '02/04/2020', '15:00:00'],
-  ['female', 'Isabella Isolani', '41988469471', 'isabella.isolani@gmail.com', '30/03/2020', '09:00:00'],
-  ['female', 'Isabella Isolani', '41988469471', 'isabella.isolani@gmail.com', '31/03/2020', '09:00:00'],
-  ['female', 'Isabella Isolani', '41988469471', 'isabella.isolani@gmail.com', '01/03/2020', '09:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '30/03/2020', '08:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '30/ 03/2020', '19:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '31/03/2020', '15:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '01/04/2020', '08:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '01/04/2020', '19:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '02/04/2020', '15:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '03/04/2020', '08:00:00'],
-  ['female', 'Melissa Brotto', '41988099523', 'melissabrotto@gmail.com', '03/04/2020', '19:00:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '30/04/2020', '10:15:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '30/04/2020', '19:00:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '31/04/2020', '10:15:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '31/04/2020', '15:15:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '31/04/2020', '20:00:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '01/04/2020', '10:15:00'],
-  ['female', 'Camila Heloisa Silveira', '47999620767', 'camilaheloisasilveira27@gmail.com', '01/04/2020', '14:30:00'],
-  ['female', 'Alessandra', '13991974697', 'ale.do.mar@gmail.com', '31/03/2020', '16:00:00'],
-  ['female', 'Alessandra', '13991974697', 'ale.do.mar@gmail.com', '31/03/2020', '17:00:00'],
-  ['female', 'Alessandra', '13991974697', 'ale.do.mar@gmail.com', '02/04/2020', '16:00:00'],
-  ['female', 'Alessandra', '13991974697', 'ale.do.mar@gmail.com', '02/04/2020', '17:00:00'],
-  ['female', 'Daniela Stark', '41995130005', 'dsjanousek@gmail.com', '31/03/2020', '15:00:00'],
-  ['female', 'Daniela Stark', '41995130005', 'dsjanousek@gmail.com', '01/04/2020', '15:00:00'],
-  ['female', 'Daniela Stark', '41995130005', 'dsjanousek@gmail.com', '02/04/2020', '16:00:00'],
-  ['female', 'Daniela Stark', '41995130005', 'dsjanousek@gmail.com', '03/04/2020', '15:00:00'],
-  ['female', 'Daniela Stark', '41995130005', 'dsjanousek@gmail.com', '04/04/2020', '15:00:00'],
-  ['female', 'Alessandra', '13991974697', 'ale.do.mar@gmail.com', '03/04/2020', '16:00:00'],
-  ['female', 'Alessandra', '13991974697', 'ale.do.mar@gmail.com', '03/04/2020', '17:00:00'],
-  ['female', 'Gisella Mariano', '41998442828', 'gisellagues@gmail.com', '31/03/2020', '19:00:00'],
-  ['female', 'Edite Yakecan', '41999273534', 'edite.yby@gmaill.com', '01/04/2020', '16:30:00'],
-  ['female', 'Edite Yakecan', '41999273534', 'edite.yby@gmaill.com', '04/04/2020', '11:00:00'],
-  ['male', 'Cristiano', '51999932022', 'jachetticristiano@gmail.com', '31/03/2020', '19:00:00'],
-  ['male', 'Cristiano', '51999932022', 'jachetticristiano@gmail.com', '31/03/2020', '20:00:00'],
-  ['female', 'Márcia Oliveira', '41 98835 6845', 'marcia_pacific@hotmail.com', '31/03/2020', '19:00:00'],
-  ['female', 'Márcia Oliveira', '42 98835 6845', 'marcia_pacific@hotmail.com', '31/03/2020', '20:00:00'],
-  ['female', 'Amanda', '41 99214836', 'amandamalucelli@gmail.com', '03/04/2020', '10:00:00'],
-  ['female', 'Amanda', '41 99214836', 'amandamalucelli@gmail.com', '03/04/2020', '11:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '31/03/2020', '10:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '31/03/2020', '11:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '01/04/2020', '10:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '01/04/2020', '11:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '02/04/2020', '10:00:00'],
-  ['female', 'Renata', '41997323898', 'venceslaurenata@hotmail.com', '02/04/2020', '11:00:00'],
+  ['10/04/2020 09:13:17', 'lecitelli@gmail.com', 'LEANDRO CARNEIRO CITELLI', '41996486486', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 17/04 (sex)', '', '14/04 (ter), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '15/04 (qua)', '', '15/04 (qua)', '', '', '', '', '', '', '', '13/04 (seg)', '', '13/04 (seg)', '', '', '', '', '', '20/04 a 26/04, 27/04 a 03/05', 'Masculino'],
+  ['10/04/2020 13:52:30', 'lecitelli@gmail.com', 'LEANDRO CARNEIRO CITELLI', '41996486486', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 17/04 (sex)', '', '14/04 (ter), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua)', '', '13/04 (seg), 15/04 (qua)', '', '13/04 (seg)', '', '', '', '', '', '20/04 a 26/04', 'Masculino'],
+  ['10/04/2020 13:54:39', 'lecitelli@gmail.com', 'LEANDRO CARNEIRO CITELLI', '41996486486', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 17/04 (sex)', '', '14/04 (ter), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua)', '', '13/04 (seg), 15/04 (qua)', '', '', '', '', '', '20/04 a 26/04', 'Masculino'],
+  ['10/04/2020 14:37:38', 'rodrigosvergara@gmail.com', 'Rodrigo Vergara', '11996395266', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Masculino'],
+  ['10/04/2020 14:45:16', 'melissabrotto@gmail.com', 'Melissa', '41988099523', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04, 27/04 a 03/05', 'Feminino'],
+  ['10/04/2020 14:56:40', 'tania.cardozo@gmail.com', 'Tania Mara Cardozo', '4191988139', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 16/04 (qui)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04, 27/04 a 03/05, 04/05 a 10/05, 11/05 a 17/05', 'Feminino'],
+  ['10/04/2020 15:28:48', 'alve_@hotmail.com', 'Alve Inacio', '41998022661', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 15/04 (qua), 16/04 (qui)', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['10/04/2020 17:55:38', 'pnarvaes@yahoo.com', 'Patrícia Narvaes', '11973382437', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 16/04 (qui)', '', '14/04 (ter), 16/04 (qui)', '', '', '', '', '', '20/04 a 26/04', 'Feminino'],
+  ['10/04/2020 18:59:57', 'silviadouat@gmail.com', 'Silvia', '47999199900', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '', '', '', '', '', '', '', '20/04 a 26/04', 'Feminino'],
+  ['10/04/2020 19:52:16', 'daniele.souza@gmail.com', 'Daniele A. Oliveira Souza', '41984392502', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 15/04 (qua), 16/04 (qui)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 15/04 (qua), 16/04 (qui)', '', '', '', '20/04 a 26/04, 27/04 a 03/05, 04/05 a 10/05, 11/05 a 17/05', 'Feminino'],
+  ['10/04/2020 21:10:34', '1255madruga@gmail.com', 'Sandra', '11930029029', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '', '', '', '', '', '20/04 a 26/04', 'Feminino'],
+  ['10/04/2020 22:21:29', 'marinademartinocnv@gmail.com', 'Marina De Martino', '11986269599', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '18/04 (sab), 19/04 (dom)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['10/04/2020 22:23:00', 'marinademartinocnv@gmail.com', 'Marina De Martino', '11986269599', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua), 18/04 (sab), 19/04 (dom)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 08:08:43', 'ale27uk@yahoo.co.uk', 'Alessandra Guimaraes', '31991559589', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua)', '', '13/04 (seg), 15/04 (qua)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 09:02:48', 'thayna.garcez@hotmail.com', 'Thayná Garcez', '41995451425', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 16/04 (qui)', '', '', '', '', '', '20/04 a 26/04, 27/04 a 03/05, 04/05 a 10/05, 11/05 a 17/05', 'Feminino'],
+  ['11/04/2020 09:22:37', 'teixeira_erica@hotmail.com', 'Érica Beatriz Teixeira', '41991015272', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex), 18/04 (sab), 19/04 (dom)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 10:24:57', 'lecitelli@gmail.com', 'LEANDRO CARNEIRO CITELLI', '41996486486', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 17/04 (sex)', '', '14/04 (ter), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua)', '', '13/04 (seg), 15/04 (qua)', '', '13/04 (seg)', '', '', '', '', '', '20/04 a 26/04', 'Masculino'],
+  ['11/04/2020 11:25:35', 'dialogarconexoes@gmail.com', 'Bia', '31999400677', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua), 16/04 (qui)', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 11:38:18', 'fredbarao@hotmail.com', 'Frederico Barao Callamari', '11984327793', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 16/04 (qui), 17/04 (sex), 18/04 (sab), 19/04 (dom)', '', '13/04 (seg), 15/04 (qua), 16/04 (qui), 17/04 (sex), 18/04 (sab), 19/04 (dom)', '', '13/04 (seg), 15/04 (qua), 16/04 (qui), 17/04 (sex), 18/04 (sab), 19/04 (dom)', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 16/04 (qui), 18/04 (sab), 19/04 (dom)', '', '13/04 (seg), 15/04 (qua), 16/04 (qui), 18/04 (sab), 19/04 (dom)', '', '', '', '', '', '', '', '', 'Masculino'],
+  ['11/04/2020 11:39:35', 'analuwalter@hotmail.com', 'Ana Lúcia Walter Rolim Drescher ', '051996505963', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '', '', '20/04 a 26/04, 27/04 a 03/05', 'Feminino'],
+  ['11/04/2020 11:40:05', 'danixd@gmail.com', 'Daniele Cardia', '061981188174', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04', 'Feminino'],
+  ['11/04/2020 12:03:08', 'dsjanousek@gmail.com', 'Daniela Stark', '41995130005', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 15/04 (qua)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '27/04 a 03/05', 'Feminino'],
+  ['11/04/2020 12:14:29', 'paty.paiva@gmail.com', 'PATRICIA LEONEL DE PAIVA', '11983728333', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua), 16/04 (qui)', '15/04 (qua), 16/04 (qui)', '15/04 (qua), 16/04 (qui)', '15/04 (qua), 16/04 (qui)', '15/04 (qua), 16/04 (qui)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04, 27/04 a 03/05, 04/05 a 10/05', 'Feminino'],
+  ['11/04/2020 12:22:07', 'lizianarodrigues@yahoo.com.br', 'Liziana Rodrigues', '41991945556', '17/04 (sex), 19/04 (dom)', '16/04 (qui)', '14/04 (ter)', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter), 16/04 (qui)', '', '', '', '', '13/04 (seg), 14/04 (ter), 16/04 (qui), 19/04 (dom)', '', '', '13/04 (seg), 14/04 (ter), 16/04 (qui), 19/04 (dom)', '', '17/04 (sex), 18/04 (sab)', '14/04 (ter), 16/04 (qui)', '19/04 (dom)', '14/04 (ter), 16/04 (qui)', '19/04 (dom)', '', '', '', '', '', '13/04 (seg)', '', '16/04 (qui), 19/04 (dom)', '15/04 (qua)', '16/04 (qui), 19/04 (dom)', '', '', '', '', '', '16/04 (qui), 19/04 (dom)', '13/04 (seg), 14/04 (ter)', '15/04 (qua), 19/04 (dom)', '13/04 (seg), 14/04 (ter)', '', 'Feminino'],
+  ['11/04/2020 12:40:40', 'marjorie2015tamaki@gmail.com', 'Marjorie Tamaki', '11971729474', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '15/04 (qua), 17/04 (sex)', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '13/04 (seg)', '', '', '', '', '', '', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '13/04 (seg), 15/04 (qua), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 13:14:12', 'ritamaral@gmail.com', 'Rita Amaral', '41991639786', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua), 16/04 (qui)', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 13:20:30', 'mborba.jr@gmail.com', 'Moacir César de Borba Júnior ', '047988243570', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Masculino'],
+  ['11/04/2020 13:52:29', 'paludo.luisotavio@gmail.com', 'Luis Otavio Paludo', '41992890638', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Masculino'],
+  ['11/04/2020 14:11:06', 'bela_zampier@yahoo.com.br', 'Izabela Zampier', '41998891014', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '17/04 (sex)', '', '', '', '', '', '', '', '', '', '15/04 (qua)', '', '13/04 (seg)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['11/04/2020 15:22:50', 'marina1568@gmail.com', 'Marina Moreira', '999244151', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter)', '', '13/04 (seg), 14/04 (ter)', '', '', '', '', '', '13/04 (seg), 14/04 (ter)', '', '13/04 (seg), 14/04 (ter)', '', '13/04 (seg)', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04', 'Feminino'],
+  ['11/04/2020 16:25:23', 'isabella.isolani@gmail.com', 'Isabella Martins Isolani', '41988469471', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua)', '', '', '20/04 a 26/04, 27/04 a 03/05', 'Feminino'],
+  ['11/04/2020 16:47:46', 'venceslaurenata@hotmail.com', 'Renata', '41997323898', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui)', '', '', '', '', '', '', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '13/04 (seg), 14/04 (ter), 15/04 (qua), 16/04 (qui), 17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04, 27/04 a 03/05, 04/05 a 10/05, 11/05 a 17/05', 'Feminino'],
+  ['11/04/2020 19:23:00', 'gabrielakinacio@gmail.com', 'Gabriela Inácio', '41999536663', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '17/04 (sex)', '', '17/04 (sex)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '14/04 (ter)', '', '14/04 (ter)', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['12/04/2020 10:54:55', 'jarvis@terra.com.br', 'JARVIS ALEXANDRE ZERMIANI', '+5547999225718', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '15/04 (qua)', '', '16/04 (qui)', '14/04 (ter)', '16/04 (qui)', '14/04 (ter)', '16/04 (qui)', '', '16/04 (qui)', '', '15/04 (qua)', '', '', '', '14/04 (ter), 15/04 (qua)', '', '', '', '', '', '', 'Masculino'],
+  ['12/04/2020 10:57:37', 'analucia@gmx.net', 'Ana Lucia Munzner', '41991036832', '', '', '', '', '16/04 (qui), 17/04 (sex)', '', '17/04 (sex)', '', '13/04 (seg)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Feminino'],
+  ['12/04/2020 12:26:26', 'gisellagues@gmail.com', 'Gisella Mariano', '41998442827', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '16/04 (qui)', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '20/04 a 26/04', 'Feminino'],
 ]; nil
 
-rows.each do |row|
-  gender, name, phone, email, date, hour = row
+hours = DateTime.current.beginning_of_day.step(DateTime.current.end_of_day, 0.5/24).map { |t| t.strftime("%H:%M") }
+
+processed = []
+rows.reverse.each do |row|
+  _, email, name, phone = row
+  gender = row.last
+
+  next if processed.include? email
+  processed << email
+
+  puts "\n\n"
+  puts "email: #{email}"
+  puts "name: #{name}"
+  puts "phone: #{phone}"
+  puts "gender: #{gender}"
 
   listener = Listener.find_or_create_by(email: email) do |listener|
     listener.name = name
     listener.phone = phone
-    listener.gender = gender
+    listener.gender = gender == 'Feminino' ? 'female' : 'male'
   end
 
-  scheduled_to = Time.zone.parse("#{date} #{hour}")
-  Schedule.find_or_create_by(listener: listener, scheduled_to: scheduled_to)
+  (4..51).each do |i|
+    next if row[i].blank?
+
+    days = row[i].split(', ')
+    days.each do |day|
+      cleaned_day = day.sub(/ \([a-z]{3}\)/, '')
+      scheduled_to = Time.zone.parse "#{cleaned_day}/2020 #{hours[i-4]}"
+
+      schedule = Schedule.find_or_create_by(listener: listener, scheduled_to: scheduled_to)
+      puts "- #{schedule.scheduled_to} in #{schedule.room_url}"
+    end
+  end
 end; nil
