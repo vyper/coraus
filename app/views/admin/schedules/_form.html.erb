@@ -1,5 +1,5 @@
 <%= simple_form_for([:admin, schedule], html: { class: 'form-horizontal' }) do |f| %>
-  <%= f.association :listener %>
+  <%= f.association :listener, collection: Listener.order('name ASC') %>
   <%= f.input :scheduled_to, as: :date_time_picker %>
   <%= f.input :room_url, hint: "Use #{link_to 'meet.jit.si', 'https://meet.jit.si', target: '_blank'} to generate a room url".html_safe %>
   <%= f.association :talker %>
