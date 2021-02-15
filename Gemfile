@@ -33,7 +33,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Authentication
-gem 'devise', '~> 4.3'
+gem 'devise', '~> 4.7'
 
 # Form builder
 gem 'simple_form', '~> 3.5'
